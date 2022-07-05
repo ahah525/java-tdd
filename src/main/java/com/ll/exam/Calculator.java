@@ -8,6 +8,8 @@ public class Calculator {
             return runMinus(s);
         } else if(s.contains("*")) {
             return runMultiply(s);
+        } else if(s.contains("/")) {
+            return runDivde(s);
         }
         return 0;
     }
@@ -39,5 +41,14 @@ public class Calculator {
         int b = Integer.parseInt(strings[1]);   // 두번째 숫자
 
         return a * b;
+    }
+
+    private static int runDivde(String s) {
+        // '/' 기준으로 자르기
+        String[] strings = s.split(" \\/ ");
+        int a = Integer.parseInt(strings[0]);   // 첫번째 숫자
+        int b = Integer.parseInt(strings[1]);   // 두번째 숫자
+
+        return a / b;
     }
 }

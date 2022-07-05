@@ -30,4 +30,9 @@ public class Apptest {
         int rs = Calculator.run("1 * 2");
         assertEquals(2, rs);
     }
+    @Test
+    public void 나누기() {
+        int rs = Calculator.run("4 / 2");
+        assertEquals(2, rs);
+    }
 }
