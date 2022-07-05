@@ -1,21 +1,21 @@
 package com.ll.exam;
 
 public class Calculator {
-    public static int run(String s) {
+    public static int calc(String s) {
         if(s.contains("+")) {
-            return runPlus(s);
+            return calcPlus(s);
         } else if(s.contains("-")) {
-            return runMinus(s);
+            return calcMinus(s);
         } else if(s.contains("*")) {
-            return runMultiply(s);
+            return calcMultiply(s);
         } else if(s.contains("/")) {
-            return runDivde(s);
+            return calcDivide(s);
         }
         return 0;
     }
 
     // 더하기 메서드
-    private static int runPlus(String s) {
+    private static int calcPlus(String s) {
         // '+' 기준으로 자르기
         String[] strings = s.split(" \\+ ");
         int a = Integer.parseInt(strings[0]);   // 첫번째 숫자
@@ -25,7 +25,7 @@ public class Calculator {
     }
 
     // 빼기 메서드
-    private static int runMinus(String s) {
+    private static int calcMinus(String s) {
         // '-' 기준으로 자르기
         String[] strings = s.split(" \\- ");
         int a = Integer.parseInt(strings[0]);   // 첫번째 숫자
@@ -34,7 +34,7 @@ public class Calculator {
         return a - b;
     }
     // 곱하기 메서드
-    private static int runMultiply(String s) {
+    private static int calcMultiply(String s) {
         // '*' 기준으로 자르기
         String[] strings = s.split(" \\* ");
         int a = Integer.parseInt(strings[0]);   // 첫번째 숫자
@@ -43,7 +43,7 @@ public class Calculator {
         return a * b;
     }
 
-    private static int runDivde(String s) {
+    private static int calcDivide(String s) {
         // '/' 기준으로 자르기
         String[] strings = s.split(" \\/ ");
         int a = Integer.parseInt(strings[0]);   // 첫번째 숫자
