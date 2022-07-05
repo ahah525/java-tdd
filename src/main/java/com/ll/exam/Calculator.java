@@ -1,7 +1,7 @@
 package com.ll.exam;
 
 public class Calculator {
-    public static int add(String s) {
+    public static int run(String s) {
         // '+' 기준으로 자르기
         String[] strings = s.split(" \\+ ");
         int a = Integer.parseInt(strings[0]);   // 첫번째 숫자
